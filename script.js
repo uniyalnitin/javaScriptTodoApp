@@ -28,7 +28,6 @@ function appendTask(data) {
     <i class="far fa-times-circle"></i>
   </div>
 </div>`;
-  $(allTasks).append($(element));
   $(uncompletedTasks).append($(element));
   refresh();
 }
@@ -81,12 +80,13 @@ $("#clear-completed").click(function () {
 $("#completeAllTask").click(function () {
   let children = $(uncompletedTasks).children().clone();
   $("img", $(children)).attr("src", "./bullet.png");
-  $(completedTasks).append($(children));
+  $(completedTasks).append(children);
   $(uncompletedTasks).empty();
   refresh();
 });
 
 function refresh() {
+  form.style.borderColor = "rgb(231, 228, 228)";
   $(allTasks).empty();
   let children = $(uncompletedTasks).children().clone();
   $(allTasks).append($(children));
