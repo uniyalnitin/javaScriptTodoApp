@@ -54,16 +54,14 @@ $("body").delegate(".cross", "click", function () {
 });
 
 function showCross(that) {
-  console.log(that);
-  console.log($(that).position().top);
   $("div.cross", that).css({
-    display: "inline-block",
+    visibility: "visible",
   });
 }
 
 function hideCross(that) {
   $("div.cross", that).css({
-    display: "none",
+    visibility: "hidden",
   });
 }
 
