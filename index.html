@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todoContainer">
+        <form id="taskForm" action="">
+          <input type="text" />
+          <i class="fas fa-tasks" id="file-icon"></i>
+          <button type="submit">
+            <i class="fas fa-plus-circle" id="add-icon"></i>
+          </button>
+        </form>
+        <div id="taskGroupAction">
+          <div>
+            <button id="completeAllTask">
+              <i class="fas fa-check-double"></i>&emsp;<span
+                >Complete all tasks</span
+              >
+            </button>
+          </div>
+          <div>
+            <button id="clear-completed">
+              Clear completed
+            </button>
+          </div>
+        </div>
+        <hr />
+        <div id="taskListSection">
+          <div id="allTasks" class="tabContent tab-active"></div>
+          <div id="completedTasks" class="tabContent">
+            <div class="task">
+              <div class="taskHeader">
+                <div class="image-container">
+                  <img src="./bullet.png" alt="" />
+                </div>
+                <div class="taskText">Heelo there</div>
+              </div>
+              <div class="cross">
+                <i class="far fa-times-circle"></i>
+              </div>
+            </div>
+          </div>
+          <div class="tabContent" id="uncompletedTasks">
+            <div class="task">
+              <div class="taskHeader">
+                <div class="image-container">
+                  <img src="./greyBullet.png" alt="" />
+                </div>
+                <div class="taskText">Heelo there</div>
+              </div>
+              <div class="cross">
+                <i class="far fa-times-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="footer">
+          <div id="taskStatus">
+            <span id="remainingTaskCount">2</span>&nbsp;tasks remaining
+          </div>
+          <div id="tabLinkSection">
+            <div class="tabLinks">
+              <button
+                id="allTabLink"
+                class="tabLinkButton active"
+                data-target="#allTasks"
+              >
+                All
+              </button>
+            </div>
+            <div class="tabLinks">
+              <button
+                id="uncompletedTabLink"
+                class="tabLinkButton"
+                data-target="#uncompletedTasks"
+              >
+                Uncomplete
+              </button>
+            </div>
+            <div class="tabLinks">
+              <button
+                id="completedTabLink"
+                class="tabLinkButton"
+                data-target="#completedTasks"
+              >
+                Completed
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
